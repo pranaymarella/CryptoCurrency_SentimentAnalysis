@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700i');
+
+.first {
+    background-color: #111c27;
+}
+
+.second {
+    background-color: #F1F7E2;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    ". currency_info twitter_sentiment gtrends gtrends ."
+    ". exchanges_info twitter_sentiment gtrends gtrends ."
+    ". exchanges_info twitter_sentiment more_info change_crypto .";
+    grid-gap: 25px;
+}
+
+.currency_info {
+    grid-area: currency_info;
+    min-height: 150px;
+    background-color: white;
+    border-top: 7px solid #F9CC7F;
+}
+
+.exchanges_info {
+    grid-area: exchanges_info;
+    /* min-height: 250px; */
+    background-color: white;
+    border-top: 7px solid #D96A25;
+}
+
+.twitter_sentiment {
+    grid-area: twitter_sentiment;
+    background-color: white;
+    overflow: auto;
+    /* border-top: 7px solid #3d82c8; */
+    border-top: 7px solid #185E65;
+}
+
+.gtrends {
+    grid-area: gtrends;
+    background-color: white;
+    border-top: 7px solid #9E1617;
+}
+
+.more_info {
+    text-align: center;
+    grid-area: more_info;
+    background-color: white;
+    border-top: 7px solid purple;
+}
+
+.change_crypto {
+    text-align: center;
+    grid-area: change_crypto;
+    background-color: white;
+    border-top: 7px solid #74A588;
+}
+
+/* Currency Information */
+.title {
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 15px;
+    font-size: 2.55em;
+    font-weight: bold;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.currency_icon {
+    margin-right: 10px;
+    /* width: 7%; */
+    width: 30px;
+}
+
+.currency_price {
+    text-align: center;
+    margin: -20px auto auto 25px;
+    font-size: 1.25em;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.currency_return_percent {
+    color: green;
+}
+
+/* Exchanges Data */
+
+.exchanges_table {
+    margin: auto;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.exchanges_table th {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0.4em 0.809em 0.6em;
+    font-size: 1em;
+    border-bottom: 1px solid;
+}
+
+.exchanges_table td {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0.4em 0.809em 0.6em;
+    font-size: 1em;
+}
+
+td:nth-child(1) {
+    letter-spacing: 1px;
+}
+
+td:nth-child(2) {
+  color:rgba(0,0,0,0.6)
+}
+
+tr:nth-child(odd) {
+  background:#f2f2f2;
+}
+
+/* Twitter Statuses */
+
+.sentiment_title {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.sentiment_list {
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    list-style-type: none;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.sentiment_list * {
+    padding: 10px;
+}
+
+.ct-series-a .ct-slice-donut {
+    stroke-width: 30px !important;
+}
+
+.ct-series-b .ct-slice-donut {
+    stroke-width: 30px !important;
+    stroke: #59922b !important;
+}
+
+.ct-series-c .ct-slice-donut {
+    stroke-width: 30px !important;
+}
+
+.ct-labels, .ct-horizontal {
+    /* display: none; */
+}
+
+.refresh {
+    cursor: pointer;
+    /* background-color: #3d82c8 !important; */
+    border: #3d82c8 !important;
+}
+
+/* Google Trends Data */
+
+.gtrends-title {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.gtrends-chart {
+    height: 80%;
+}
+
+/* More Information tab */
+
+.more_info ul {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-size: 1em;
+    margin: 10px auto auto 10px;
+    padding: 25px;
+    list-style-type: none;
+}
+
+/* Changing to new crypto */
+
+.search {
+    padding-top: 35px;
+    padding-bottom: 15px;
+}
+
+.search_button {
+    cursor: pointer;
+}
+
+.tt-hint {
+  color: #333;
+}
+
+.tt-menu {
+  margin: 12px 0;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.tt-suggestion {
+  padding: 5px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.tt-suggestion:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #0097cf;
+}
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: #0097cf;
+}
+
+
+/* example specific styles */
+
+
+/* ----------------------- */
+
+#custom-templates .empty-message {
+  padding: 5px 10px;
+  text-align: center;
+}
+
+#multiple-datasets .league-name {
+  margin: 0 20px 5px 20px;
+  padding: 3px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+#scrollable-dropdown-menu .tt-menu {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+#rtl-support .tt-menu {
+  text-align: right;
+}

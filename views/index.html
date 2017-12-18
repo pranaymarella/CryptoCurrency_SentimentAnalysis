@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="end">
+<head>
+    <link href="public/css/styles.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.min.css" rel="stylesheet" type="text/css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="fullpage">
+        <!-- First Section -->
+        <div class="section first fp-noscroll">
+            <div class="grid">
+                <!-- Basic Currency Data -->
+                <div class="currency_info">
+                    <p class="title"><img src="public/images/CryptoIcons/BTC.svg" class="currency_icon" alt="Bitcoin"/><span class="currency_name">Bitcoin</span>(<span class="currency_ticker">BTC</span>)</p>
+                    <p class="currency_price"><span class="price"><strong>$19,700 </span><span class="currency_return_percent">(8.56%)</span></strong><p>
+                </div>
+                <!-- List Exchanges by Price and Volume Being Traded -->
+                <div class="exchanges_info">
+                    <table class="exchanges_table">
+                        <thead>
+                            <th>Exchange</th>
+                            <th>Price</th>
+                            <th>Volume (in BTC)</th>
+                        </thead>
+                        <tbody class="exchanges_table_body"></tbody>
+                    </table>
+                </div>
+
+                <div id="sentiment" class="twitter_sentiment">
+                    <div class='sentiment_title'>
+                        <p>TWITTER SENTIMENT</p>
+                    </div>
+                    <div class='twitter-chart'>
+                    </div>
+                    <ul class="sentiment_list">
+                        <li><span style="color: #59922b;">Positive/Bullish</span><i class="fa fa-arrow-right" aria-hidden="true"></i><span class="twitter_positive"></span></li>
+                        <li><span style="color: #d70206;">Negative/Bearish</span><i class="fa fa-arrow-right" aria-hidden="true"></i><span class="twitter_negative"></span></li>
+                        <li><span style="color: #f4c63d;">Neutral</span><i class="fa fa-arrow-right" aria-hidden="true"></i><span class="twitter_neutral"></span></li>
+                        <li><button type="button" class="btn btn-info btn-small refresh text-center">Refresh<i class="fa fa-refresh" aria-hidden="true"></i></button></li>
+                    </ul>
+                </div>
+
+                <div id="trends" class="gtrends">
+                    <div class="gtrends-title">
+                        Google Trends
+                    </div>
+                    <div class="gtrends-chart">
+                    </div>
+                </div>
+
+                <div id="more" class="more_info">
+                    <ul>
+                        <li><strong>Current Market Cap:</strong> <span class="marketcap"></span></li>
+                        <li><strong>Amount in Circulation:</strong> <span class="amount_available"></span> coins</li>
+                        <li><strong>Max Supply:</strong> <span class="amount_max"></span> coins</li>
+                        <li><strong>Rank:</strong> <span class="rank"></span></li>
+                    </ul>
+                </div>
+
+                <div id="change" class="change_crypto">
+                    <div id="scrollable-dropdown-menu" class="search">
+                        <input id="search" class="form-control typeahead new_crypto" type="text" placeholder="Search Crypto">
+                    </div>
+
+                    <div>
+                        <button type="button" class="btn btn-success btn-small search_button text-center">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Second Section -->
+        <!-- <div class="section second fp-noscroll">
+        </div> -->
+    </div>
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.2.1/typeahead.jquery.min.js" type="text/javascript"></script>
+    <script src="public/js/moment.min.js" type="text/javascript"></script>
+    <script src="public/js/page.js" type="text/javascript"></script>
+</body>
+</html>

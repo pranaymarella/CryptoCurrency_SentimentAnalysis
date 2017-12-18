@@ -1,0 +1,24 @@
+{
+  "name": "crypto_sentiment_analysis",
+  "version": "1.0.0",
+  "description": "Performs Sentiment Analysis on Twitter Sentiment Data",
+  "main": "app.js",
+  "engines": {
+      "node": ">=4.3.2"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "google-trends-api": "^4.3.0",
+    "moment": "^2.20.0",
+    "node-fetch": "^1.7.3",
+    "sentiment": "^4.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gcloud app deploy",
+    "start": "node app.js"
+  },
+  "author": "Pranay Marella",
+  "license": "ISC"
+}
