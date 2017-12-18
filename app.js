@@ -4,7 +4,6 @@ const path = require('path');
 const Twitter = require('twitter');
 const sentiment = require('sentiment');
 const googleTrends = require('google-trends-api');
-const PORT = process.env.PORT || 3000;
 
 // Twitter API Credentials
 const twitter_consumer_key = 'kV93DxhPzYVXsS9UotpOwwKC6';
@@ -73,4 +72,4 @@ app.get('/google/:id([a-zA-Z]*)', function(req, res) {
     });
 });
 
-app.listen(PORT);
+app.listen(process.env.PORT || 3000);
